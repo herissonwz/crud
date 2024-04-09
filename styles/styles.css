@@ -1,0 +1,230 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --backgroundColor: #f3f3f3;
+    --color: #333;
+
+
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    background-color:  rgb(36, 41, 46);
+    color: white;
+    margin-bottom: 5rem;
+}
+
+header {
+    padding: 3.5rem 0;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+}
+
+main .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+main .add {
+    background-color: rgb(21, 159, 201);
+    margin-bottom: 10px;
+}
+
+main table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+main table tr {
+    text-align: center;
+    line-height: 30px;
+}
+
+main table Thead {
+    height: 50px;
+    background-color: rgb(36, 41, 46);
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--backgroundColor);
+}
+
+main table Thead th,
+main Tbody td {
+    border: 2px solid rgba(128, 113, 113, 0.1);
+    padding: 10px 0;
+}
+
+main Tbody td {
+    font-weight: 400;
+}
+tbody .tbody_row:hover{
+    background-color: rgb(108, 232, 157);
+    color: rgb(0, 0, 0);
+}
+tbody button,
+.add {
+    padding: 12px 32px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 9px;
+    margin: 0 10px;
+    color: var(--backgroundColor);
+    opacity: .90;
+    transition: .2s ease-in-out;
+
+}
+
+tbody button:hover,
+.add:hover {
+    opacity: 1;
+}
+
+tbody button.edit {
+    background-color: rgb(184, 211, 32);
+}
+
+tbody button.delete {
+    background-color: rgb(180, 31, 31);
+}
+
+/* centering the form */
+.close-form {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    right: 20px;
+    font-size: 25px;
+    color: rgb(180, 31, 31);
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.close-form:hover {
+    background-color: #333;
+}
+
+form {
+    position: fixed;
+    width: 100%;
+    background-color:  rgb(36, 41, 46);
+    z-index: 10;
+    min-height: 100vh;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    color: #ffffff;
+}
+
+form .section-header {
+    text-align: center;
+    padding: 3.5rem 0;
+
+}
+
+form .section-header h2 {
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+form .input-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 600px;
+}
+
+form .input-box .input-single {
+    position: relative;
+    height: 50px;
+    padding: 1rem 0;
+    margin: 30px;
+}
+
+form .input-box .input-single label {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    top: -7px;
+    font-size: 17px;
+    transition: .3s;
+}
+
+form .input-box .input-single input:focus~label {
+    transform: translateY(-8px);
+    color: rgb(108, 232, 157);
+    font-size: 13px;
+    transition: .3s;
+}
+
+form .input-box .input-single input:focus {
+    border-bottom: 2px solid rgb(108, 232, 157);
+}
+
+form .input-box .input-single input {
+    width: 600px;
+    padding: 22px 35px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    font-size: 15px;
+    color: #ffffff;
+}
+
+form button {
+    width: 100%;
+    display: block;
+    padding: 15px;
+    text-transform: uppercase;
+    background-color: rgb(21, 159, 201);
+    margin-top: 2px;
+    opacity: .85;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+
+}
+
+form button:hover {
+    opacity: 1;
+}
+
+@media screen  and (max-width : 768px){
+    form .input-box{
+        width: 100%;
+    }
+    form .input-box .input-single input{
+       width: 100%;
+    }
+    form button {
+        width: 300px;
+    }
+    tbody button, .add {
+        padding: 8px 18px;
+        margin: 10px 0;
+    }
+}
